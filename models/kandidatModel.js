@@ -32,7 +32,7 @@ const kandidatSchema = new mongoose.Schema({
   },
   kategori: {
     type: String,
-    enum: ["BEM", "HIMA", "DPP"],
+    enum: ["BEM", "HIMA"],
     required: true,
   },
   terdaftar: {

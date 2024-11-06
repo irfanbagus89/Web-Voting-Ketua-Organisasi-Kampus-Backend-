@@ -48,19 +48,10 @@ const isAdminBem = asyncHandler(async (req, res, next) => {
     next();
   }
 });
-const isAdminDpp = asyncHandler(async (req, res, next) => {
-  const { email } = req.user;
-  const adminUser = await User.findOne({ email });
-  if (adminUser.role != "admin dpp") {
-    throw new Error("You are not admin dpp");
-  } else {
-    next();
-  }
-});
+
 module.exports = {
   authMiddleware,
   isAdmin,
   isAdminHima,
   isAdminBem,
-  isAdminDpp,
 };
